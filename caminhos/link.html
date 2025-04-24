@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Document</title>
+    <script>
+
+        function mudaFotoComAtraso(foto) {
+            const icone = document.getElementById('icone');
+            icone.style.opacity = 0
+
+            setTimeout(function () {
+                icone.src = foto;
+                icone.style.opacity = 1;
+            }, 500);
+        }
+    </script>
+</head>
+
+<body>
+    <a href="../index.html"><img class="logoP" src="../imagens/logo01.png" alt=""></a>
+    <div class="modelos">
+        <div class="topo link">
+            <ul class="declaracao">
+                <li onmouseover="mudaFotoComAtraso('../imagens/botconversa.png')"><a target="_blank"
+                        href="https://app.botconversa.com.br/login">Botconversa</a></li>
+                <li onmouseover="mudaFotoComAtraso('../imagens/zimbra.png')"><a target="_blank"
+                        href="https://webmail.jetmailx.com.br/?loginOp=relogin&username=firmas@tabeliaocaragua.com.br">Zimbra</a>
+                </li>
+                <li onmouseover="mudaFotoComAtraso('../imagens/55pbx.png')"><a target="_blank"
+                        href="https://fone.55pbx.com/login">55pbx</a></li>
+            </ul>
+        </div>
+        <div class="imagens">
+            <img id="icone" class="imagem_link" src="../imagens/logo05.png" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>
