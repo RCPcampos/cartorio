@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Declarações</title>
+    <script>
+
+        function mudaFotoComAtraso(foto) {
+            const icone = document.getElementById('icone');
+            icone.style.opacity = 0
+
+            setTimeout(function () {
+                icone.src = foto;
+                icone.style.opacity = 1;
+            }, 500);
+        }
+    </script>
+</head>
+
+<body>
+    <a href="../index.html"><img class="logoP" src="../imagens/logo01.png" alt=""></a>
+    <div class="modelos">
+
+        <div class="topo">
+            <ul class="declaracao">
+                <li><a onmouseover="mudaFotoComAtraso('../imagens/viagem-internacional.jpg')" target="_blank"
+                        href="../doc/viagem-internacional.pdf">Autorização de viagem internacional</a></li>
+                <li><a onmouseover="mudaFotoComAtraso('../imagens/passaporte.jpg')" target="_blank"
+                        href="../doc/passaporte.pdf">Expedição de passaporte</a></li>
+                <li><a onmouseover="mudaFotoComAtraso('../imagens/declaracao-residencia.jpg')" target="_blank"
+                        href="../doc/declaracao-residencia.pdf">Declaração de residencia</a></li>
+                <li><a onmouseover="mudaFotoComAtraso('../imagens/proc-prefeitura.jpg')" target="_blank"
+                        href="../doc/proc-prefeitura.pdf">Procuração prefeitura</a></li>
+                <li><a onmouseover="mudaFotoComAtraso('../imagens/proc-veic.jpg')" target="_blank"
+                        href="../doc/proc-veic.pdf">Procuração veiculo</a></li>
+                <li><a onmouseover="mudaFotoComAtraso('../imagens/req-motor.jpg')" target="_blank"
+                        href="../doc/req-motor.pdf">Requerimento de regularização de motor</a></li>
+                <li><a onmouseover="mudaFotoComAtraso('../imagens/comunicado-venda.jpg')" target="_blank"
+                        href="../doc/comunicado-venda.pdf">Requerimento de cancelamento de comunicado de veiculo</a>
+                </li>
+                <li><a onmouseover="mudaFotoComAtraso('../imagens/uniao-estavel.jpg')" target="_blank"
+                        href="../doc/uniao-estavel.pdf">União estavel</a></li>
+            </ul>
+        </div>
+        <div class="imagens"><img id="icone" class="imagem_link" src="../imagens/logo05.png" alt=""></div>
+    </div>
+
+</body>
+
+</html>
