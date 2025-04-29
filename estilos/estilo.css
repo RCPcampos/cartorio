@@ -42,3 +42,38 @@ section h3{
     font-size: 15pt;
     margin: 0;
 }
+
+#botaoTopo {
+    position: fixed;
+    bottom: 52px;
+    right: 60px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+  }
+  
+  #botaoTopo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #botaoTopo svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  #botaoTopo.mostrar {
+    opacity: 1; /* Torna visível quando a classe 'mostrar' é adicionada */
+  }
+
+  .destaque {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+  }
