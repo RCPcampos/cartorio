@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="icon" href="../imagens/favicon.ico">
-    <title>Declarações</title>
+    <title>Modelos</title>
     <script>
 
         function mudaFotoComAtraso(foto) {
@@ -22,9 +21,24 @@
 </head>
 
 <body>
-    <a href="../index.html"><img class="logoP" src="../imagens/logo01.png" alt=""></a>
-    <div class="modelos">
+    <header class="header">
+        <a href="../index.html" class="logo"><span>TNP</span>CARAGUA</a>
 
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="../index.html">Início</a>
+            <a href="mapa.html">consulta selo</a>
+            <a href="#modelos">modelos</a>
+            <a href="link.html">link</a>
+            <a href="circulares.html">Fraudes</a>
+        </nav>
+
+    </header>
+
+    <h1 class="hero">MODELOS</h1>
+
+    <div class="modelos wrapper" id="modelos">
         <div class="topo">
             <ul class="declaracao">
                 <li><a onmouseover="mudaFotoComAtraso('../imagens/viagem-internacional.jpg')" target="_blank"
@@ -48,6 +62,10 @@
         </div>
         <div class="imagens"><img id="icone" class="imagem_link" src="../imagens/logo05.png" alt=""></div>
     </div>
+
+    <footer>
+        <img src="../imagens/12b.png" alt="">
+    </footer>
 
 </body>
 

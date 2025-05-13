@@ -1,18 +1,76 @@
-body {
+html, body {
     background-color: #d6d6d6;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-}
-/*formatação logoP*/
-.logoP {
-    height: 100px;
-    width: auto;
+    height: 100%;
 }
 
-/*formatação do mapa*/
+.wrapper {
+    min-height: 100%; /* Garante que o wrapper tenha pelo menos a altura da janela */
+  }
+
+
+/*menu*/
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    z-index: 10000;
+    background: #000;
+}
+
+.header .logo {
+    font-weight: bolder;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.header .logo span {
+    color: #295c89;
+}
+
+.header .navbar a {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header .navbar a:hover {
+    background: #295c89;
+}
+
+/*fim menu*/
+
+.containerprincipal img {
+    display: block;
+    margin: 30px auto;
+    width: 50%;
+}
+
+footer{
+    background-color: #858585;
+    bottom: 0;
+    width: 100%;
+}
+
+footer img{
+    display: block;
+    margin: auto;
+    width: 70px;
+}
+
+/*mapa*/
 #svg-map path {
-    fill: #224ca7;
+    fill: #295c89;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -21,7 +79,6 @@ body {
 
 #svg-map text {
     fill: #fff;
-    font: 12px Arial-BoldMT, sans-serif !important;
     cursor: pointer
 }
 
@@ -53,60 +110,10 @@ body {
     justify-content: center;
 }
 
-/*formatação index*/
+/*fim mapa*/
 
-nav.menu {
-    text-align: right;
-    margin-top: -80px;
-}
-
-nav.menu a {
-    text-decoration: none;
-    margin: 5px;
-    padding: 5px;
-    text-transform: uppercase;
-    color: black;
-    position: relative;
-}
-
-nav.menu a::after {
-    content: " ";
-    width: 0%;
-    height: 4px;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: 0.3s ease-in-out;
-}
-
-nav.menu a:hover::after {
-    width: 100%;
-}
-
-.topo p {
-    margin-top: -20px;
-}
-
-.topo img {
-    height: 400px;
-    height: 400px;
-    display: block;
-    margin: 150px auto;
-}
-
-.link ul {
-    border-right: 1px solid #000 !important;
-    width: 100px !important;
-}
-
-.topo ul {
-    border-right: 3px solid #000;
-    width: 290px;
-}
 
 /*formatação declarações*/
-
 ul {
     list-style: none;
     margin-top: 100px;
@@ -141,15 +148,14 @@ ul.declaracao li {
     border-radius: 10px;
 }
 
-.imagem_link:hover {
-    opacity: 0.3;
-}
-
 .modelos {
     display: flex;
     justify-content: center;
-    align-items: flex-start;/* Alinha os itens ao topo */
+    align-items: flex-start;
+    /* Alinha os itens ao topo */
 }
+
+
 
 /*relatorios*/
 
@@ -157,11 +163,111 @@ ul.relatorio li {
     text-transform: uppercase;
 }
 
-footer{
-    text-align: center;
-    color: #fff;
-    background-color: #00000079;
-    padding: 1px;
-    text-shadow: 2px 2px 5px #000;
-    letter-spacing: 2px;
+html::-webkit-scrollbar {
+    width: 1rem;
 }
+
+html::-webkit-scrollbar-track {
+    /*o que fica abaixo da barra*/
+    background: #000;
+}
+
+html::-webkit-scrollbar-thumb {
+    /*cor da barra*/
+    background: #295c89;
+    border-radius: 5px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #061942; /* Cor do thumb ao passar o mouse */
+  }
+
+
+/*circulares*/
+.content{
+    text-align: center;
+    margin-top: 150px;
+}
+
+.hero{
+    font-size: 40pt;
+    text-shadow: 2px 2px 5px #ffffff;
+    text-align: center;
+    color: #295c89
+}
+
+h2{
+    font-size: 22pt;
+    text-align: center;
+    text-decoration: underline;
+}
+
+section{
+    width: 1100px;
+    background-color: #fff;
+    padding: 10px;
+    margin: 35px auto;
+    border-radius: 5px;   
+}
+
+section p b{
+    text-align: justify;
+    font-size: 20px;
+}
+
+section h3{
+    background-color: #e2dfdf;
+    padding:10px;
+    border-radius: 5px;
+    font-size: 15pt;
+    margin: 0;
+}
+
+#backToTopBtn {
+    display: none; /* Oculto inicialmente */
+    position: fixed; /* Fixa na tela durante a rolagem */
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Garante que fique acima de outros elementos */
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  #backToTopBtn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  #botaoTopo {
+    position: fixed;
+    bottom: 52px;
+    right: 60px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+  }
+  
+  #botaoTopo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #botaoTopo svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  #botaoTopo.mostrar {
+    opacity: 1; /* Torna visível quando a classe 'mostrar' é adicionada */
+  }
