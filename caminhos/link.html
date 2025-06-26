@@ -5,22 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
-    <title>Document</title>
-    <script>
+    <link rel="icon" type="image/x-icon" href="../imagens/12b.ico">
+    <title>Links Úteis</title>
 
-        function mudaFotoComAtraso(foto) {
-            const icone = document.getElementById('icone');
-            icone.style.opacity = 0
-
-            setTimeout(function () {
-                icone.src = foto;
-                icone.style.opacity = 1;
-            }, 500);
-        }
-    </script>
 </head>
 
 <body>
+
+
+    <script>
+        function searchLinks() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let links = document.querySelectorAll('.links-grid a');
+
+            links.forEach(link => {
+                let text = link.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    link.style.display = '';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
     <header class="header">
         <a href="../index.html" class="logo"><span>TNP</span>CARAGUA</a>
 
@@ -32,32 +40,136 @@
             <a href="modelos.html">modelos</a>
             <a href="#link">link</a>
             <a href="circulares.html">Fraudes</a>
+            <a href="rg.html">Análise de RG</a>
         </nav>
 
     </header>
 
     <h1 class="hero">link</h1>
 
-    <div class="modelos wrapper" id="link">
-        <div class="topo link">
-            <ul class="declaracao">
-                <li onmouseover="mudaFotoComAtraso('../imagens/botconversa.png')"><a target="_blank"
-                        href="https://app.botconversa.com.br/login">Botconversa</a></li>
-                <li onmouseover="mudaFotoComAtraso('../imagens/zimbra.png')"><a target="_blank"
-                        href="https://webmail.jetmailx.com.br/?loginOp=relogin&username=firmas@tabeliaocaragua.com.br">Zimbra</a>
-                </li>
-                <li onmouseover="mudaFotoComAtraso('../imagens/55pbx.png')"><a target="_blank"
-                        href="https://fone.55pbx.com/login">55pbx</a></li>
-            </ul>
-        </div>
-        <div class="imagens">
-            <img id="icone" class="imagem_link" src="../imagens/logo05.png" alt="">
-        </div>
-    </div>
+    <input class="pesquisa_link" type="text" id="searchInput" placeholder="Pesquisar link..." onkeyup="searchLinks()">
 
-    <footer>
-        <img src="../imagens/12b.png" alt="">
-    </footer>
+    <main class="containers">
+        <section class="links-section" id="categoria1">
+            <div class="links-grid ">
+                <a href="https://webmail.jetmailx.com.br/?loginOp=relogin&username=firmas@tabeliaocaragua.com.br"
+                    target="_blank" class="link-card protesto">
+                    <i class="">email</i>
+                    <h3>Zimbra</h3>
+                    <p>E-mail</p>
+                </a>
+                <a href="https://portal.chatbotmaker.io/?mode=register&email=rafael@tabeliaocaragua.com.br#"
+                    target="_blank" class="link-card whatsapp">
+                    <i class="whatsapp">whatsapp</i>
+                    <h3>SURI</h3>
+                    <p>Whatsapp</p>
+                </a>
+                <a href="https://fone.55pbx.com/login" target="_blank" class="link-card telefone">
+                    <i class="telefone">telefone</i>
+                    <h3>55PBX</h3>
+                    <p>Telefone</p>
+                </a>
+                <a href="https://www.jucesponline.sp.gov.br/ResultadoBusca.aspx" target="_blank"
+                    class="link-card cnpj protesto">
+                    <i class="cnpj protesto">cnpj protesto</i>
+                    <h3>JUCESP</h3>
+                    <p>Consulta de CNPJ de São Paulo</p>
+                </a>
+                <a href="https://validar.iti.gov.br/"
+                    target="_blank" class="link-card protesto">
+                    <i class="">validador verificador validar</i>
+                    <h3>ITI</h3>
+                    <p>Serviço de validação de assinaturas eletrônicas</p>
+                </a>
+                <a href="https://servicos.receita.fazenda.gov.br/servicos/cpf/impressaocomprovante/consultaimpressao.asp"
+                    target="_blank" class="link-card">
+                    <i class="cpf">cpf consulta</i>
+                    <h3>2° via CPF</h3>
+                    <p>Impressão do Comprovante de Inscrição no CPF</p>
+                </a>
+                <a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/atendimento-eleitor"
+                    target="_blank" class="link-card">
+                    <i class="titulo quitacao quitação quitaçao">titulo quitacao quitação quitaçao</i>
+                    <h3>Título de Eleitor</h3>
+                    <p>Impressão de Título de eleitor.</p>
+                </a>
+                <a href="https://solucoes.receita.fazenda.gov.br/servicos/cnpjreva/cnpjreva_solicitacao.asp"
+                    target="_blank" class="link-card">
+                    <i class="cnpj">cnpj</i>
+                    <h3>CNPJ REDESIM</h3>
+                    <p>Emissão de Comprovante de Inscrição e de Situação Cadastral CNPJ</p>
+                </a>
+                <a href="https://www2.ssp.sp.gov.br/aacweb/carrega-iframe" target="_blank" class="link-card">
+                    <i class="antecedentes criminais">antecedentes criminais</i>
+                    <h3>Antecedentes Criminais</h3>
+                    <p>Emissão de atestado de Antecedentes Criminais</p>
+                </a>
+                <a href="https://portalservicos.senatran.serpro.gov.br/#/condutor/validar-cnh" target="_blank"
+                    class="link-card">
+                    <i class="autenticidade cnh validar">autenticidade cnh validar</i>
+                    <h3>Validar CNH</h3>
+                    <p>SENATRAN - Secretaria Nacional de TrânsitoPortal de Serviços.</p>
+                </a>
+                <a href="https://www.serasa.com.br/limpa-nome-online/?msclkid=f31a540c3e9e183e41203c3596609e66&utm_source=bing&utm_medium=cpc&utm_campaign=PSQ%20-%20MF%20-%20%20LNO%20-%20Brand%20-%20Serasa%20-%20Imp.%20Share&utm_term=serasa&utm_content=Serasa%20e%20Serasa%20Consumidor"
+                    target="_blank" class="link-card">
+                    <i class="protesto consulta cpf">protesto consulta cpf</i>
+                    <h3>SERASA</h3>
+                    <p>Consulta de Dívidas no CPF</p>
+                </a>
+                <a href="https://protestosp.com.br/" target="_blank" class="link-card">
+                    <i class="protesto consulta cpf">protesto consulta cpf</i>
+                    <h3>CENPROT</h3>
+                    <p>Consulta de Dívidas no CPF</p>
+                </a>
+                <a href="https://www.tst.jus.br/en/certidao1" target="_blank" class="link-card">
+                    <i class="escritura">escrituras</i>
+                    <h3>TST</h3>
+                    <p>Certidão Negativa de Débitos Trabalhistas</p>
+                </a>
+                <a href="https://trt15.jus.br/servicos/certidoes/certidao-eletronica-de-acoes-trabalhistas-ceat"
+                    target="_blank" class="link-card">
+                    <i class="escritura">escrituras</i>
+                    <h3>TRT - 15ª REGIÃO</h3>
+                    <p>CEAT - Certidão Eletrônica de Ações Trabalhistas</p>
+                </a>
+                <a href="https://aplicacoes10.trt2.jus.br/certidao_trabalhista_eletronica/public/index.php/index/solicitacao"
+                    target="_blank" class="link-card">
+                    <i class="escritura">escrituras</i>
+                    <h3>TRT – 2ª REGIÃO FÍSICA</h3>
+                    <p>Certidão de Reclamação Trabalhista (Processos Físicos)</p>
+                </a>
+                <a href="https://pje.trt2.jus.br/certidoes/trabalhista/emissao" target="_blank" class="link-card">
+                    <i class="escritura">escrituras</i>
+                    <h3>TRT – 2ª REGIÃO DIGITAL</h3>
+                    <p>Certidão de Reclamação Trabalhista</p>
+                </a>
+                <a href="https://solucoes.receita.fazenda.gov.br/servicos/certidaointernet/pf/emitir" target="_blank"
+                    class="link-card">
+                    <i class="escritura">escrituras</i>
+                    <h3>CND – UNIÃO </h3>
+                    <p>Certidão de Débitos Relativos a Créditos Tributários Federais e à Dívida Ativa da União</p>
+                </a>
+                <a href="https://web.trf3.jus.br/certidao-regional/CertidaoCivelEleitoralCriminal/SolicitarDadosCertidao"
+                    target="_blank" class="link-card">
+                    <i class="escritura">escrituras</i>
+                    <h3>JUSTIÇA FEDERAL CÍVEL E CRIMINAL</h3>
+                    <p>Solicitar certidão</p>
+                </a>
+                <a href="https://esaj.tjsp.jus.br/sco/abrirResultadoCadastro.do?uuidCaptcha=sajcaptcha_6536b7c905364367a969bf542bcc50b1"
+                    target="_blank" class="link-card">
+                    <i class="escritura">escrituras</i>
+                    <h3>JUSTIÇA ESTADUAL (TJSP)</h3>
+                    <p>Cadastro de Pedido de Certidão</p>
+                </a>
+                <a href="https://www.registrocivil.org.br/"
+                    target="_blank" class="link-card">
+                    <i class="escritura">escrituras</i>
+                    <h3>Registro Civil</h3>
+                    <p>Certidão de casamento/nascimento</p>
+                </a>
+            </div>
+        </section>
+    </main>
 
 </body>
 

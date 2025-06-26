@@ -1,15 +1,11 @@
-html, body {
+html,
+body {
     background-color: #d6d6d6;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
 }
-
-.wrapper {
-    min-height: 100%; /* Garante que o wrapper tenha pelo menos a altura da janela */
-  }
-
 
 /*menu*/
 .header {
@@ -56,13 +52,13 @@ html, body {
     width: 50%;
 }
 
-footer{
+footer {
     background-color: #858585;
     bottom: 0;
     width: 100%;
 }
 
-footer img{
+footer img {
     display: block;
     margin: auto;
     width: 70px;
@@ -142,8 +138,8 @@ ul.declaracao li {
     transition: opacity 0.3s ease-in-out;
     opacity: 1;
     margin: 15px;
-    height: 750px;
-    width: 700px;
+    height: 700px;
+    width: 650px;
     border: 1px solid #000;
     border-radius: 10px;
 }
@@ -179,95 +175,267 @@ html::-webkit-scrollbar-thumb {
 }
 
 html::-webkit-scrollbar-thumb:hover {
-    background-color: #061942; /* Cor do thumb ao passar o mouse */
-  }
+    background-color: #061942;
+    /* Cor do thumb ao passar o mouse */
+}
 
 
 /*circulares*/
-.content{
+.content {
     text-align: center;
     margin-top: 150px;
 }
 
-.hero{
+.hero {
     font-size: 40pt;
     text-shadow: 2px 2px 5px #ffffff;
     text-align: center;
     color: #295c89
 }
 
-h2{
+h2 {
     font-size: 22pt;
     text-align: center;
     text-decoration: underline;
 }
 
-section{
+section {
     width: 1100px;
     background-color: #fff;
     padding: 10px;
     margin: 35px auto;
-    border-radius: 5px;   
+    border-radius: 5px;
 }
 
-section p b{
+section p b {
     text-align: justify;
     font-size: 20px;
 }
 
-section h3{
+section h3 {
     background-color: #e2dfdf;
-    padding:10px;
+    padding: 10px;
     border-radius: 5px;
     font-size: 15pt;
     margin: 0;
 }
 
 #backToTopBtn {
-    display: none; /* Oculto inicialmente */
-    position: fixed; /* Fixa na tela durante a rolagem */
+    display: none;
+    /* Oculto inicialmente */
+    position: fixed;
+    /* Fixa na tela durante a rolagem */
     bottom: 20px;
     right: 20px;
-    z-index: 99; /* Garante que fique acima de outros elementos */
+    z-index: 99;
+    /* Garante que fique acima de outros elementos */
     border: none;
     outline: none;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo semi-transparente */
     color: white;
     cursor: pointer;
     padding: 10px;
     border-radius: 5px;
     font-size: 16px;
-  }
-  
-  #backToTopBtn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+}
 
-  #botaoTopo {
+#backToTopBtn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#botaoTopo {
     position: fixed;
     bottom: 52px;
     right: 60px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo preto semi-transparente */
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    opacity: 0; /* Inicialmente invisível */
+    opacity: 0;
+    /* Inicialmente invisível */
     transition: opacity 0.3s ease-in-out;
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-  }
-  
-  #botaoTopo a {
+    z-index: 1000;
+    /* Garante que fique acima de outros elementos */
+}
+
+#botaoTopo a {
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  #botaoTopo svg {
+}
+
+#botaoTopo svg {
     width: 30px;
     height: 30px;
-  }
-  
-  #botaoTopo.mostrar {
-    opacity: 1; /* Torna visível quando a classe 'mostrar' é adicionada */
-  }
+}
+
+#botaoTopo.mostrar {
+    opacity: 1;
+    /* Torna visível quando a classe 'mostrar' é adicionada */
+}
+
+/* Estilos CSS para a div e o iframe */
+.pdf-container {
+    display: flex;
+    /* Habilita flexbox no body */
+    justify-content: center;
+    /* Centraliza horizontalmente o conteúdo do body */
+    align-items: center;
+    /* Centraliza verticalmente o conteúdo (se houver altura suficiente) */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    width: 70%;
+    /* Largura total da div */
+    height: 700px;
+    /* Altura fixa para a div */
+    border: 1px solid #ccc;
+    /* Borda para visualizar a div */
+    overflow: hidden;
+    /* Garante que o iframe não "vaze" da div */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra para destacar */
+    margin: auto;
+    border-radius: 10px;
+}
+
+.pdf-frame {
+    width: 100%;
+    /* Ocupa toda a largura da div */
+    height: 100%;
+    /* Ocupa toda a altura da div */
+    border: none;
+    /* Remove a borda padrão do iframe */
+}
+
+
+
+a {
+    text-decoration: none;
+    /* Remove sublinhado dos links */
+    color: inherit;
+    /* Herda a cor do elemento pai */
+}
+
+/* Seções de Links */
+
+
+.links-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Layout em Grid para os Links */
+.links-grid {
+    display: grid;
+    /* Colunas responsivas: mínimo de 250px, máximo de 1fr (distribuição igual) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    /* Espaçamento entre os cards */
+}
+
+.link-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    /* Para alinhar o ícone e o texto */
+    flex-direction: column;
+    /* Conteúdo em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    /* Efeito de "levantar" */
+    box-shadow: 0 8px 20px rgba(41, 92, 137, 0.5);
+    border-color: #295c89;
+    /* Borda azul ao passar o mouse */
+}
+
+.link-card i {
+    font-size: 3.5em;
+    color: #295c89;
+    /* Cor dos ícones */
+    margin-bottom: 15px;
+}
+
+.link-card h3 {
+    font-size: 1.6em;
+    color: #295c89;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.link-card p {
+    font-size: 1.0em;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.pesquisa_link {
+    display: block;
+    width: 20%;
+    padding: 10px;
+    margin: auto;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+input:focus {
+    border-color: #295c89;
+    /* verde quando selecionado */
+    outline: none;
+    /* remove o contorno padrão */
+}
+
+.containers i {
+    display: none;
+}
+
+/* Responsividade Básica (para telas menores) */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-header nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        /* Permite que os itens da navegação quebrem a linha */
+        justify-content: center;
+    }
+
+    .main-header nav ul li {
+        margin: 0 10px 10px 10px;
+    }
+
+    .links-section h2 {
+        font-size: 2em;
+    }
+
+    .link-card {
+        padding: 20px;
+    }
+
+    .link-card i {
+        font-size: 3em;
+    }
+
+    .link-card h3 {
+        font-size: 1.4em;
+    }
+}

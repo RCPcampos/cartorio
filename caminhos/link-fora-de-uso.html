@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="icon" type="image/x-icon" href="../imagens/12b.ico">
+    <title>Abrir Múltiplas Abas</title>
+    <style>
+        .pdf-card {
+            /* Estilos básicos do card */
+            border: 1px solid #295c89;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            width: 200px; /* ou outro tamanho */
+        }
+
+        .preview-area {
+            position: relative;
+            width: 100%;
+            height: 200px; /* Defina uma altura para a área de pré-visualização */
+            overflow:hidden; /* Garante que as imagens não transbordem */
+            margin-bottom: 0px;
+        }
+
+        .preview-area .hover-image {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        function searchLinks() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let links = document.querySelectorAll('.links-grid a');
+        
+            links.forEach(link => {
+                let text = link.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    link.style.display = '';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        }
+        </script>
+
+    <header class="header">
+        <a href="../index.html" class="logo "><span>TNP</span>CARAGUA</a>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="../index.html">Início</a>
+            <a href="mapa.html">consulta selo</a>
+            <a href="modelos.html">modelos</a>
+            <a href="#link">link</a>
+            <a href="circulares.html">Fraudes</a>
+            <a href="rg.html">Análise de RG</a>
+        </nav>
+
+    </header>
+
+    <h1 class="hero">DOCUMENTOS</h1>
+
+    <input class="pesquisa_link" type="text" id="searchInput" placeholder="Pesquisar link..." onkeyup="searchLinks()">
+
+    <main class="containers">
+        <section class="links-section" id="categoria1">
+            <div class="links-grid">
+
+                
+                <div class="pdf-card link-card">
+                    <a href="../doc/proc-prefeitura.pdf" target="_blank">
+                    <h3>Procuração Prefeitura</h3>
+                    <div class="preview-area">
+                        <img class="hover-image" src="../imagens/proc-prefeitura.jpg" alt="Pré-visualização do PDF">
+                    </div>
+                    </a>
+                </div>
+
+                <div class="pdf-card link-card">
+                    <a href="../doc/viagem-internacional.pdf" target="_blank">
+                    <h3>Autorizacao de Viagem Int.</h3>
+                    <div class="preview-area">
+                        <img class="hover-image" src="../imagens/viagem-internacional.jpg" alt="Pré-visualização do PDF">
+                    </div>
+                    </a>
+                </div>
+
+                <div class="pdf-card link-card">
+                    <a href="../doc/viagem-nacional.pdf" target="_blank">
+                    <h3>Autorizacao de Viagem Nac.</h3>
+                    <div class="preview-area">
+                        <img class="hover-image" src="../imagens/viagem-nacional.jpg" alt="Pré-visualização do PDF">
+                    </div>
+                    </a>
+                </div>
+
+                <div class="pdf-card link-card">
+                    <a href="../doc/proc-prefeitura.pdf" target="_blank">
+                    <h3>Procuração prefeitura</h3>
+                    <div class="preview-area">
+                        <img class="hover-image" src="../imagens/proc-prefeitura.jpg" alt="Pré-visualização do PDF">
+                    </div>
+                    </a>
+                </div>
+
+                
+
+
+            </div>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
